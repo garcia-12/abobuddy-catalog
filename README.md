@@ -4,9 +4,9 @@ Dieses Repository stellt einen **öffentlich erreichbaren Kategorien-Katalog** a
 
 ## Inhalt
 
-- `categories.json` – Hauptkatalog (offizielle Kategorien)
+- `docs/categories.json` – Hauptkatalog (offizielle Kategorien)
 - optional: `README.md` – diese Doku
-- optional: `CHANGELOG.md` – Änderungen am Katalog (empfohlen)
+
 
 ## JSON-Schema
 
