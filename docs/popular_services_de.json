@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "schema_version": 1,
+    "country": "DE",
+    "language": "de",
+    "generated_at": "2026-01-20",
+    "notes": [
+      "category_id muss exakt zu euren category_id Werten aus categories.json passen. Falls eure IDs anders heißen, passt sie per Search&Replace an.",
+      "icon_slug ist für Simple Icons CDN gedacht (https://cdn.simpleicons.org/<icon_slug>)."
+    ],
+    "ranking_basis": [
+      {
+        "category": "entertainment",
+        "method": "JustWatch SVOD Marktanteile Deutschland Q1 2025 (Ranking nach Marktanteil)."
+      },
+      {
+        "category": "music",
+        "method": "GEMA/Goldmedia Studie (Key Facts: Reihenfolge der meistgenutzten Musikstreaming-Dienste; ergänzende Penetrationswerte aus Music Ally Zusammenfassung)."
+      }
+    ],
+    "grouping": "categories.{label_fr}.services[]"
+  },
+  "categories": {
+    "entertainment": {
+      "category_id": "entertainment",
+      "label_de": "Unterhaltung",
+      "services": [
+        {
+          "service_id": "prime_video",
+          "name_de": "Amazon Prime Video",
+          "category_id": "entertainment",
+          "icon_slug": "amazonprimevideo",
+          "brand_hex": "#00A8E1"
+        },
+        {
+          "service_id": "netflix",
+          "name_de": "Netflix",
+          "category_id": "entertainment",
+          "icon_slug": "netflix",
+          "brand_hex": "#E50914"
+        },
+        {
+          "service_id": "disney_plus",
+          "name_de": "Disney+",
+          "category_id": "entertainment",
+          "icon_slug": "disneyplus",
+          "brand_hex": "#113CCF"
+        },
+        {
+          "service_id": "apple_tv_plus",
+          "name_de": "Apple TV+",
+          "category_id": "entertainment",
+          "icon_slug": "appletv",
+          "brand_hex": "#000000"
+        },
+        {
+          "service_id": "wow",
+          "name_de": "WOW (Sky)",
+          "category_id": "entertainment",
+          "icon_slug": "sky",
+          "brand_hex": "#000000"
+        },
+        {
+          "service_id": "paramount_plus",
+          "name_de": "Paramount+",
+          "category_id": "entertainment",
+          "icon_slug": "paramountplus",
+          "brand_hex": "#0064FF"
+        },
+        {
+          "service_id": "rtl_plus",
+          "name_de": "RTL+",
+          "category_id": "entertainment",
+          "icon_slug": "rtl",
+          "brand_hex": "#E1007A"
+        }
+      ]
+    },
+    "music": {
+      "category_id": "music",
+      "label_de": "Musik",
+      "services": [
+        {
+          "service_id": "spotify",
+          "name_de": "Spotify",
+          "category_id": "music",
+          "icon_slug": "spotify",
+          "brand_hex": "#1DB954"
+        },
+        {
+          "service_id": "amazon_music",
+          "name_de": "Amazon Music",
+          "category_id": "music",
+          "icon_slug": "amazonmusic",
+          "brand_hex": "#00A8E1"
+        },
+        {
+          "service_id": "apple_music",
+          "name_de": "Apple Music",
+          "category_id": "music",
+          "icon_slug": "applemusic",
+          "brand_hex": "#FA243C"
+        },
+        {
+          "service_id": "soundcloud",
+          "name_de": "SoundCloud",
+          "category_id": "music",
+          "icon_slug": "soundcloud",
+          "brand_hex": "#FF5500"
+        },
+        {
+          "service_id": "youtube_music",
+          "name_de": "YouTube Music",
+          "category_id": "music",
+          "icon_slug": "youtubemusic",
+          "brand_hex": "#FF0000"
+        },
+        {
+          "service_id": "deezer",
+          "name_de": "Deezer",
+          "category_id": "music",
+          "icon_slug": "deezer",
+          "brand_hex": "#FEAA2D"
+        },
+        {
+          "service_id": "tidal",
+          "name_de": "TIDAL",
+          "category_id": "music",
+          "icon_slug": "tidal",
+          "brand_hex": "#000000"
+        }
+      ]
+    },
+    "productivity": {
+      "category_id": "productivity",
+      "label_de": "Produktivität",
+      "services": [
+        {
+          "service_id": "microsoft_365",
+          "name_de": "Microsoft 365",
+          "category_id": "productivity",
+          "icon_slug": "microsoftoffice",
+          "brand_hex": "#D83B01"
+        },
+        {
+          "service_id": "notion",
+          "name_de": "Notion",
+          "category_id": "productivity",
+          "icon_slug": "notion",
+          "brand_hex": "#000000"
+        }
+      ]
+    },
+    "software": {
+      "category_id": "software",
+      "label_de": "Software",
+      "services": [
+        {
+          "service_id": "adobe_creative_cloud",
+          "name_de": "Adobe Creative Cloud",
+          "category_id": "software",
+          "icon_slug": "adobecreativecloud",
+          "brand_hex": "#DA1F26"
+        },
+        {
+          "service_id": "chatgpt_plus",
+          "name_de": "ChatGPT Plus",
+          "category_id": "software",
+          "icon_slug": "openai",
+          "brand_hex": "#10A37F"
+        }
+      ]
+    },
+    "cloud_storage": {
+      "category_id": "cloud_storage",
+      "label_de": "Cloud-Speicher",
+      "services": [
+        {
+          "service_id": "google_one",
+          "name_de": "Google One",
+          "category_id": "cloud_storage",
+          "icon_slug": "googleone",
+          "brand_hex": "#4285F4"
+        },
+        {
+          "service_id": "icloud_plus",
+          "name_de": "iCloud+",
+          "category_id": "cloud_storage",
+          "icon_slug": "icloud",
+          "brand_hex": "#007AFF"
+        },
+        {
+          "service_id": "dropbox",
+          "name_de": "Dropbox",
+          "category_id": "cloud_storage",
+          "icon_slug": "dropbox",
+          "brand_hex": "#0061FF"
+        }
+      ]
+    },
+    "fitness": {
+      "category_id": "fitness",
+      "label_de": "Fitness",
+      "services": [
+        {
+          "service_id": "strava",
+          "name_de": "Strava",
+          "category_id": "fitness",
+          "icon_slug": "strava",
+          "brand_hex": "#FC4C02"
+        },
+        {
+          "service_id": "freeletics",
+          "name_de": "Freeletics",
+          "category_id": "fitness",
+          "icon_slug": "freeletics",
+          "brand_hex": "#2F9CF4"
+        }
+      ]
+    }
+  }
+}
