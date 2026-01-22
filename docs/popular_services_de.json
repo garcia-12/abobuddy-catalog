@@ -1,989 +1,197 @@
 {
   "meta": {
-    "schema_version": 1,
+    "schema_version": 2,
     "country": "DE",
     "language": "de",
     "generated_at": "2026-01-21",
-    "notes": [
-      "category_id muss exakt zu euren category_id Werten aus categories.json passen. Falls eure IDs anders heißen, passt sie per Search&Replace an.",
-      "icon_slug ist für Simple Icons CDN gedacht (https://cdn.simpleicons.org/<icon_slug>).",
-      "2026-01-21: Services-Liste erweitert (Abo Suggestions), neue Kategorien ergänzt; domain optional je Service."
-    ],
-    "ranking_basis": [
-      {
-        "category": "entertainment",
-        "method": "JustWatch SVOD Marktanteile Deutschland Q1 2025 (Ranking nach Marktanteil)."
-      },
-      {
-        "category": "music",
-        "method": "GEMA/Goldmedia Studie (Key Facts: Reihenfolge der meistgenutzten Musikstreaming-Dienste; ergänzende Penetrationswerte aus Music Ally Zusammenfassung)."
-      }
-    ],
-    "grouping": "categories.{label_fr}.services[]"
+    "source": "user_aboSuggestions_list",
+    "icon_provider": {
+      "type": "simple_icons_cdn",
+      "base_url": "https://cdn.simpleicons.org/",
+      "notes": [
+        "Use ?viewbox=auto&size=96&color=<hex>&dark_mode_color=<hex> if needed.",
+        "Recommended: use https://cdn.simpleicons.org/<icon_slug> WITHOUT color override to get official brand color.",
+        "Fallback UI required when icon not found."
+      ]
+    }
   },
   "categories": {
     "Divertissements": {
       "category_id": "entertainment",
-      "label_fr": "Divertissements",
-      "label_de": "Unterhaltung",
       "services": [
-        {
-          "service_id": "prime_video",
-          "name_de": "Amazon Prime Video",
-          "category_id": "entertainment",
-          "icon_slug": "amazonprimevideo",
-          "brand_hex": "#00A8E1"
-        },
-        {
-          "service_id": "netflix",
-          "name_de": "Netflix",
-          "category_id": "entertainment",
-          "icon_slug": "netflix",
-          "brand_hex": "#E50914"
-        },
-        {
-          "service_id": "disney_plus",
-          "name_de": "Disney+",
-          "category_id": "entertainment",
-          "icon_slug": "disneyplus",
-          "brand_hex": "#113CCF"
-        },
-        {
-          "service_id": "apple_tv_plus",
-          "name_de": "Apple TV+",
-          "category_id": "entertainment",
-          "icon_slug": "appletv",
-          "brand_hex": "#000000"
-        },
-        {
-          "service_id": "wow",
-          "name_de": "WOW (Sky)",
-          "category_id": "entertainment",
-          "icon_slug": "sky",
-          "brand_hex": "#000000"
-        },
-        {
-          "service_id": "paramount_plus",
-          "name_de": "Paramount+",
-          "category_id": "entertainment",
-          "icon_slug": "paramountplus",
-          "brand_hex": "#0064FF"
-        },
-        {
-          "service_id": "rtl_plus",
-          "name_de": "RTL+",
-          "category_id": "entertainment",
-          "icon_slug": "rtl",
-          "brand_hex": "#E1007A"
-        },
-        {
-          "service_id": "sky",
-          "name_de": "Sky",
-          "category_id": "entertainment",
-          "icon_slug": "sky",
-          "brand_hex": null,
-          "domain": "sky.de"
-        },
-        {
-          "service_id": "joyn_plus_plus",
-          "name_de": "Joyn PLUS+",
-          "category_id": "entertainment",
-          "icon_slug": "joyn",
-          "brand_hex": null,
-          "domain": "joyn.de"
-        },
-        {
-          "service_id": "dazn",
-          "name_de": "DAZN",
-          "category_id": "entertainment",
-          "icon_slug": "dazn",
-          "brand_hex": null,
-          "domain": "dazn.com"
-        },
-        {
-          "service_id": "discovery_plus",
-          "name_de": "Discovery+",
-          "category_id": "entertainment",
-          "icon_slug": "discoveryplus",
-          "brand_hex": null,
-          "domain": "discoveryplus.com"
-        },
-        {
-          "service_id": "magentatv",
-          "name_de": "MagentaTV",
-          "category_id": "entertainment",
-          "icon_slug": "magentatv",
-          "brand_hex": null,
-          "domain": "magentatv.de"
-        },
-        {
-          "service_id": "zattoo",
-          "name_de": "Zattoo",
-          "category_id": "entertainment",
-          "icon_slug": "zattoo",
-          "brand_hex": null,
-          "domain": "zattoo.com"
-        },
-        {
-          "service_id": "waipu_tv",
-          "name_de": "waipu.tv",
-          "category_id": "entertainment",
-          "icon_slug": "waiputv",
-          "brand_hex": null,
-          "domain": "waipu.tv"
-        },
-        {
-          "service_id": "youtube_premium",
-          "name_de": "YouTube Premium",
-          "category_id": "entertainment",
-          "icon_slug": "youtube",
-          "brand_hex": null,
-          "domain": "youtube.com"
-        }
+        { "service_id": "netflix", "name_de": "Netflix", "domain": "netflix.com", "icon_slug": "netflix", "brand_hex": "#E50914" },
+        { "service_id": "amazon_prime_video", "name_de": "Amazon Prime Video", "domain": "primevideo.com", "icon_slug": "amazonprimevideo", "brand_hex": null },
+        { "service_id": "disney_plus", "name_de": "Disney+", "domain": "disneyplus.com", "icon_slug": "disneyplus", "brand_hex": null },
+        { "service_id": "wow_sky", "name_de": "WOW (Sky)", "domain": "wowtv.de", "icon_slug": "wow", "brand_hex": null },
+        { "service_id": "sky", "name_de": "Sky", "domain": "sky.de", "icon_slug": "sky", "brand_hex": null },
+        { "service_id": "rtl_plus", "name_de": "RTL+", "domain": "rtlplus.de", "icon_slug": "rtl", "brand_hex": null },
+        { "service_id": "joyn_plus", "name_de": "Joyn PLUS+", "domain": "joyn.de", "icon_slug": "joyn", "brand_hex": null },
+        { "service_id": "dazn", "name_de": "DAZN", "domain": "dazn.com", "icon_slug": "dazn", "brand_hex": null },
+        { "service_id": "apple_tv_plus", "name_de": "Apple TV+", "domain": "tv.apple.com", "icon_slug": "appletv", "brand_hex": null },
+        { "service_id": "paramount_plus", "name_de": "Paramount+", "domain": "paramountplus.com", "icon_slug": "paramountplus", "brand_hex": null },
+        { "service_id": "discovery_plus", "name_de": "Discovery+", "domain": "discoveryplus.com", "icon_slug": "discoveryplus", "brand_hex": null },
+        { "service_id": "magentatv", "name_de": "MagentaTV", "domain": "magentatv.de", "icon_slug": "magentatv", "brand_hex": null },
+        { "service_id": "zattoo", "name_de": "Zattoo", "domain": "zattoo.com", "icon_slug": "zattoo", "brand_hex": null },
+        { "service_id": "waipu_tv", "name_de": "waipu.tv", "domain": "waipu.tv", "icon_slug": "waiputv", "brand_hex": null },
+        { "service_id": "youtube_premium", "name_de": "YouTube Premium", "domain": "youtube.com", "icon_slug": "youtube", "brand_hex": null }
       ]
     },
     "Musique": {
       "category_id": "music",
-      "label_fr": "Musique",
-      "label_de": "Musik",
       "services": [
-        {
-          "service_id": "spotify",
-          "name_de": "Spotify",
-          "category_id": "music",
-          "icon_slug": "spotify",
-          "brand_hex": "#1DB954"
-        },
-        {
-          "service_id": "amazon_music",
-          "name_de": "Amazon Music Unlimited",
-          "category_id": "music",
-          "icon_slug": "amazonmusic",
-          "brand_hex": "#00A8E1",
-          "domain": "music.amazon.com"
-        },
-        {
-          "service_id": "apple_music",
-          "name_de": "Apple Music",
-          "category_id": "music",
-          "icon_slug": "applemusic",
-          "brand_hex": "#FA243C"
-        },
-        {
-          "service_id": "soundcloud",
-          "name_de": "SoundCloud Go+",
-          "category_id": "music",
-          "icon_slug": "soundcloud",
-          "brand_hex": "#FF5500",
-          "domain": "soundcloud.com"
-        },
-        {
-          "service_id": "youtube_music",
-          "name_de": "YouTube Music",
-          "category_id": "music",
-          "icon_slug": "youtubemusic",
-          "brand_hex": "#FF0000"
-        },
-        {
-          "service_id": "deezer",
-          "name_de": "Deezer",
-          "category_id": "music",
-          "icon_slug": "deezer",
-          "brand_hex": "#FEAA2D"
-        },
-        {
-          "service_id": "tidal",
-          "name_de": "TIDAL",
-          "category_id": "music",
-          "icon_slug": "tidal",
-          "brand_hex": "#000000"
-        }
-      ]
-    },
-    "Productivité": {
-      "category_id": "productivity",
-      "label_fr": "Productivité",
-      "label_de": "Produktivität",
-      "services": [
-        {
-          "service_id": "microsoft_365",
-          "name_de": "Microsoft 365",
-          "category_id": "productivity",
-          "icon_slug": "microsoftoffice",
-          "brand_hex": "#D83B01"
-        },
-        {
-          "service_id": "notion",
-          "name_de": "Notion",
-          "category_id": "productivity",
-          "icon_slug": "notion",
-          "brand_hex": "#000000"
-        },
-        {
-          "service_id": "google_workspace",
-          "name_de": "Google Workspace",
-          "category_id": "productivity",
-          "icon_slug": "googleworkspace",
-          "brand_hex": null,
-          "domain": "workspace.google.com"
-        },
-        {
-          "service_id": "canva_pro",
-          "name_de": "Canva Pro",
-          "category_id": "productivity",
-          "icon_slug": "canva",
-          "brand_hex": null,
-          "domain": "canva.com"
-        },
-        {
-          "service_id": "figma",
-          "name_de": "Figma",
-          "category_id": "productivity",
-          "icon_slug": "figma",
-          "brand_hex": null,
-          "domain": "figma.com"
-        },
-        {
-          "service_id": "evernote",
-          "name_de": "Evernote",
-          "category_id": "productivity",
-          "icon_slug": "evernote",
-          "brand_hex": null,
-          "domain": "evernote.com"
-        },
-        {
-          "service_id": "todoist",
-          "name_de": "Todoist",
-          "category_id": "productivity",
-          "icon_slug": "todoist",
-          "brand_hex": null,
-          "domain": "todoist.com"
-        },
-        {
-          "service_id": "trello",
-          "name_de": "Trello",
-          "category_id": "productivity",
-          "icon_slug": "trello",
-          "brand_hex": null,
-          "domain": "trello.com"
-        },
-        {
-          "service_id": "slack",
-          "name_de": "Slack",
-          "category_id": "productivity",
-          "icon_slug": "slack",
-          "brand_hex": null,
-          "domain": "slack.com"
-        },
-        {
-          "service_id": "zoom",
-          "name_de": "Zoom",
-          "category_id": "productivity",
-          "icon_slug": "zoom",
-          "brand_hex": null,
-          "domain": "zoom.us"
-        }
-      ]
-    },
-    "Logiciels": {
-      "category_id": "software",
-      "label_fr": "Logiciels",
-      "label_de": "Software",
-      "services": [
-        {
-          "service_id": "adobe_creative_cloud",
-          "name_de": "Adobe Creative Cloud",
-          "category_id": "software",
-          "icon_slug": "adobecreativecloud",
-          "brand_hex": "#DA1F26"
-        },
-        {
-          "service_id": "chatgpt_plus",
-          "name_de": "ChatGPT Plus",
-          "category_id": "software",
-          "icon_slug": "openai",
-          "brand_hex": "#10A37F"
-        }
-      ]
-    },
-    "Stockage cloud": {
-      "category_id": "cloud_storage",
-      "label_fr": "Stockage cloud",
-      "label_de": "Cloud-Speicher",
-      "services": [
-        {
-          "service_id": "google_one",
-          "name_de": "Google One",
-          "category_id": "cloud_storage",
-          "icon_slug": "googleone",
-          "brand_hex": "#4285F4"
-        },
-        {
-          "service_id": "icloud_plus",
-          "name_de": "iCloud+",
-          "category_id": "cloud_storage",
-          "icon_slug": "icloud",
-          "brand_hex": "#007AFF"
-        },
-        {
-          "service_id": "dropbox",
-          "name_de": "Dropbox",
-          "category_id": "cloud_storage",
-          "icon_slug": "dropbox",
-          "brand_hex": "#0061FF"
-        },
-        {
-          "service_id": "box",
-          "name_de": "Box",
-          "category_id": "cloud_storage",
-          "icon_slug": "box",
-          "brand_hex": null,
-          "domain": "box.com"
-        },
-        {
-          "service_id": "onedrive",
-          "name_de": "OneDrive",
-          "category_id": "cloud_storage",
-          "icon_slug": "onedrive",
-          "brand_hex": null,
-          "domain": "onedrive.live.com"
-        },
-        {
-          "service_id": "proton_drive",
-          "name_de": "Proton Drive",
-          "category_id": "cloud_storage",
-          "icon_slug": "protondrive",
-          "brand_hex": null,
-          "domain": "proton.me"
-        }
-      ]
-    },
-    "Fitness": {
-      "category_id": "fitness",
-      "label_fr": "Fitness",
-      "label_de": "Fitness",
-      "services": [
-        {
-          "service_id": "strava",
-          "name_de": "Strava",
-          "category_id": "fitness",
-          "icon_slug": "strava",
-          "brand_hex": "#FC4C02"
-        },
-        {
-          "service_id": "freeletics",
-          "name_de": "Freeletics",
-          "category_id": "fitness",
-          "icon_slug": "freeletics",
-          "brand_hex": "#2F9CF4"
-        },
-        {
-          "service_id": "fitness_first",
-          "name_de": "Fitness First",
-          "category_id": "fitness",
-          "icon_slug": "fitnessfirst",
-          "brand_hex": null,
-          "domain": "fitnessfirst.de"
-        },
-        {
-          "service_id": "mcfit",
-          "name_de": "McFIT",
-          "category_id": "fitness",
-          "icon_slug": "mcfit",
-          "brand_hex": null,
-          "domain": "mcfit.com"
-        },
-        {
-          "service_id": "urban_sports_club",
-          "name_de": "Urban Sports Club",
-          "category_id": "fitness",
-          "icon_slug": "urbansportsclub",
-          "brand_hex": null,
-          "domain": "urbansportsclub.com"
-        },
-        {
-          "service_id": "gymondo",
-          "name_de": "Gymondo",
-          "category_id": "fitness",
-          "icon_slug": "gymondo",
-          "brand_hex": null,
-          "domain": "gymondo.com"
-        },
-        {
-          "service_id": "peloton",
-          "name_de": "Peloton",
-          "category_id": "fitness",
-          "icon_slug": "peloton",
-          "brand_hex": null,
-          "domain": "onepeloton.com"
-        },
-        {
-          "service_id": "headspace",
-          "name_de": "Headspace",
-          "category_id": "fitness",
-          "icon_slug": "headspace",
-          "brand_hex": null,
-          "domain": "headspace.com"
-        },
-        {
-          "service_id": "calm",
-          "name_de": "Calm",
-          "category_id": "fitness",
-          "icon_slug": "calm",
-          "brand_hex": null,
-          "domain": "calm.com"
-        }
+        { "service_id": "spotify", "name_de": "Spotify", "domain": "spotify.com", "icon_slug": "spotify", "brand_hex": "#1DB954" },
+        { "service_id": "apple_music", "name_de": "Apple Music", "domain": "music.apple.com", "icon_slug": "applemusic", "brand_hex": null },
+        { "service_id": "amazon_music_unlimited", "name_de": "Amazon Music Unlimited", "domain": "music.amazon.com", "icon_slug": "amazonmusic", "brand_hex": null },
+        { "service_id": "deezer", "name_de": "Deezer", "domain": "deezer.com", "icon_slug": "deezer", "brand_hex": null },
+        { "service_id": "tidal", "name_de": "TIDAL", "domain": "tidal.com", "icon_slug": "tidal", "brand_hex": null },
+        { "service_id": "soundcloud_go_plus", "name_de": "SoundCloud Go+", "domain": "soundcloud.com", "icon_slug": "soundcloud", "brand_hex": null }
       ]
     },
     "Lecture & Audio": {
       "category_id": "reading_audio",
-      "label_fr": "Lecture & Audio",
-      "label_de": "Lesen & Audio",
       "services": [
-        {
-          "service_id": "audible",
-          "name_de": "Audible",
-          "category_id": "reading_audio",
-          "icon_slug": "audible",
-          "brand_hex": null,
-          "domain": "audible.de"
-        },
-        {
-          "service_id": "bookbeat",
-          "name_de": "BookBeat",
-          "category_id": "reading_audio",
-          "icon_slug": "bookbeat",
-          "brand_hex": null,
-          "domain": "bookbeat.com"
-        },
-        {
-          "service_id": "blinkist",
-          "name_de": "Blinkist",
-          "category_id": "reading_audio",
-          "icon_slug": "blinkist",
-          "brand_hex": null,
-          "domain": "blinkist.com"
-        },
-        {
-          "service_id": "readly",
-          "name_de": "Readly",
-          "category_id": "reading_audio",
-          "icon_slug": "readly",
-          "brand_hex": null,
-          "domain": "readly.com"
-        },
-        {
-          "service_id": "kindle_unlimited",
-          "name_de": "Kindle Unlimited",
-          "category_id": "reading_audio",
-          "icon_slug": "kindle",
-          "brand_hex": null,
-          "domain": "amazon.de"
-        },
-        {
-          "service_id": "scribd_everand",
-          "name_de": "Scribd / Everand",
-          "category_id": "reading_audio",
-          "icon_slug": "scribd",
-          "brand_hex": null,
-          "domain": "everand.com"
-        },
-        {
-          "service_id": "thalia_abo",
-          "name_de": "Thalia Abo",
-          "category_id": "reading_audio",
-          "icon_slug": "thalia",
-          "brand_hex": null,
-          "domain": "thalia.de"
-        },
-        {
-          "service_id": "legimi",
-          "name_de": "Legimi",
-          "category_id": "reading_audio",
-          "icon_slug": "legimi",
-          "brand_hex": null,
-          "domain": "legimi.de"
-        }
+        { "service_id": "audible", "name_de": "Audible", "domain": "audible.de", "icon_slug": "audible", "brand_hex": null },
+        { "service_id": "bookbeat", "name_de": "BookBeat", "domain": "bookbeat.com", "icon_slug": "bookbeat", "brand_hex": null },
+        { "service_id": "blinkist", "name_de": "Blinkist", "domain": "blinkist.com", "icon_slug": "blinkist", "brand_hex": null },
+        { "service_id": "readly", "name_de": "Readly", "domain": "readly.com", "icon_slug": "readly", "brand_hex": null },
+        { "service_id": "kindle_unlimited", "name_de": "Kindle Unlimited", "domain": "amazon.de", "icon_slug": "kindle", "brand_hex": null },
+        { "service_id": "scribd_everand", "name_de": "Scribd / Everand", "domain": "everand.com", "icon_slug": "scribd", "brand_hex": null },
+        { "service_id": "thalia_abo", "name_de": "Thalia Abo", "domain": "thalia.de", "icon_slug": "thalia", "brand_hex": null },
+        { "service_id": "legimi", "name_de": "Legimi", "domain": "legimi.de", "icon_slug": "legimi", "brand_hex": null }
       ]
     },
     "Jeux": {
       "category_id": "gaming",
-      "label_fr": "Jeux",
-      "label_de": "Gaming",
       "services": [
-        {
-          "service_id": "nintendo_switch_online",
-          "name_de": "Nintendo Switch Online",
-          "category_id": "gaming",
-          "icon_slug": "nintendo",
-          "brand_hex": null,
-          "domain": "nintendo.com"
-        },
-        {
-          "service_id": "playstation_plus",
-          "name_de": "PlayStation Plus",
-          "category_id": "gaming",
-          "icon_slug": "playstation",
-          "brand_hex": null,
-          "domain": "playstation.com"
-        },
-        {
-          "service_id": "xbox_game_pass",
-          "name_de": "Xbox Game Pass",
-          "category_id": "gaming",
-          "icon_slug": "xbox",
-          "brand_hex": null,
-          "domain": "xbox.com"
-        },
-        {
-          "service_id": "ea_play",
-          "name_de": "EA Play",
-          "category_id": "gaming",
-          "icon_slug": "ea",
-          "brand_hex": null,
-          "domain": "ea.com"
-        },
-        {
-          "service_id": "ubisoft_plus",
-          "name_de": "Ubisoft+",
-          "category_id": "gaming",
-          "icon_slug": "ubisoft",
-          "brand_hex": null,
-          "domain": "ubisoft.com"
-        },
-        {
-          "service_id": "geforce_now",
-          "name_de": "GeForce NOW",
-          "category_id": "gaming",
-          "icon_slug": "nvidia",
-          "brand_hex": null,
-          "domain": "nvidia.com"
-        },
-        {
-          "service_id": "apple_arcade",
-          "name_de": "Apple Arcade",
-          "category_id": "gaming",
-          "icon_slug": "applearcade",
-          "brand_hex": null,
-          "domain": "apple.com"
-        },
-        {
-          "service_id": "google_play_pass",
-          "name_de": "Google Play Pass",
-          "category_id": "gaming",
-          "icon_slug": "googleplay",
-          "brand_hex": null,
-          "domain": "play.google.com"
-        },
-        {
-          "service_id": "world_of_warcraft",
-          "name_de": "World of Warcraft",
-          "category_id": "gaming",
-          "icon_slug": "worldofwarcraft",
-          "brand_hex": null,
-          "domain": "worldofwarcraft.com"
-        },
-        {
-          "service_id": "final_fantasy_xiv",
-          "name_de": "Final Fantasy XIV",
-          "category_id": "gaming",
-          "icon_slug": "finalfantasy",
-          "brand_hex": null,
-          "domain": "finalfantasyxiv.com"
-        }
+        { "service_id": "nintendo_switch_online", "name_de": "Nintendo Switch Online", "domain": "nintendo.com", "icon_slug": "nintendo", "brand_hex": null },
+        { "service_id": "playstation_plus", "name_de": "PlayStation Plus", "domain": "playstation.com", "icon_slug": "playstation", "brand_hex": null },
+        { "service_id": "xbox_game_pass", "name_de": "Xbox Game Pass", "domain": "xbox.com", "icon_slug": "xbox", "brand_hex": null },
+        { "service_id": "ea_play", "name_de": "EA Play", "domain": "ea.com", "icon_slug": "ea", "brand_hex": null },
+        { "service_id": "ubisoft_plus", "name_de": "Ubisoft+", "domain": "ubisoft.com", "icon_slug": "ubisoft", "brand_hex": null },
+        { "service_id": "geforce_now", "name_de": "GeForce NOW", "domain": "nvidia.com", "icon_slug": "nvidia", "brand_hex": null },
+        { "service_id": "apple_arcade", "name_de": "Apple Arcade", "domain": "apple.com", "icon_slug": "applearcade", "brand_hex": null },
+        { "service_id": "google_play_pass", "name_de": "Google Play Pass", "domain": "play.google.com", "icon_slug": "googleplay", "brand_hex": null },
+        { "service_id": "world_of_warcraft", "name_de": "World of Warcraft", "domain": "worldofwarcraft.com", "icon_slug": "worldofwarcraft", "brand_hex": null },
+        { "service_id": "final_fantasy_xiv", "name_de": "Final Fantasy XIV", "domain": "finalfantasyxiv.com", "icon_slug": "finalfantasy", "brand_hex": null }
+      ]
+    },
+    "Productivité": {
+      "category_id": "productivity",
+      "services": [
+        { "service_id": "adobe_creative_cloud", "name_de": "Adobe Creative Cloud", "domain": "adobe.com", "icon_slug": "adobecreativecloud", "brand_hex": null },
+        { "service_id": "microsoft_365", "name_de": "Microsoft 365", "domain": "microsoft.com", "icon_slug": "microsoftoffice", "brand_hex": null },
+        { "service_id": "google_workspace", "name_de": "Google Workspace", "domain": "workspace.google.com", "icon_slug": "googleworkspace", "brand_hex": null },
+        { "service_id": "canva_pro", "name_de": "Canva Pro", "domain": "canva.com", "icon_slug": "canva", "brand_hex": null },
+        { "service_id": "figma", "name_de": "Figma", "domain": "figma.com", "icon_slug": "figma", "brand_hex": null },
+        { "service_id": "notion", "name_de": "Notion", "domain": "notion.so", "icon_slug": "notion", "brand_hex": null },
+        { "service_id": "evernote", "name_de": "Evernote", "domain": "evernote.com", "icon_slug": "evernote", "brand_hex": null },
+        { "service_id": "todoist", "name_de": "Todoist", "domain": "todoist.com", "icon_slug": "todoist", "brand_hex": null },
+        { "service_id": "trello", "name_de": "Trello", "domain": "trello.com", "icon_slug": "trello", "brand_hex": null },
+        { "service_id": "slack", "name_de": "Slack", "domain": "slack.com", "icon_slug": "slack", "brand_hex": null },
+        { "service_id": "zoom", "name_de": "Zoom", "domain": "zoom.us", "icon_slug": "zoom", "brand_hex": null }
+      ]
+    },
+    "Stockage cloud": {
+      "category_id": "cloud_storage",
+      "services": [
+        { "service_id": "google_one", "name_de": "Google One", "domain": "one.google.com", "icon_slug": "googleone", "brand_hex": null },
+        { "service_id": "icloud_plus", "name_de": "iCloud+", "domain": "apple.com", "icon_slug": "icloud", "brand_hex": null },
+        { "service_id": "dropbox", "name_de": "Dropbox", "domain": "dropbox.com", "icon_slug": "dropbox", "brand_hex": null },
+        { "service_id": "box", "name_de": "Box", "domain": "box.com", "icon_slug": "box", "brand_hex": null },
+        { "service_id": "onedrive", "name_de": "OneDrive", "domain": "onedrive.live.com", "icon_slug": "onedrive", "brand_hex": null },
+        { "service_id": "proton_drive", "name_de": "Proton Drive", "domain": "proton.me", "icon_slug": "protondrive", "brand_hex": null }
       ]
     },
     "Email": {
       "category_id": "email",
-      "label_fr": "Email",
-      "label_de": "E-Mail",
       "services": [
-        {
-          "service_id": "gmx_promail",
-          "name_de": "GMX ProMail",
-          "category_id": "email",
-          "icon_slug": "gmx",
-          "brand_hex": null,
-          "domain": "gmx.net"
-        },
-        {
-          "service_id": "web_de_club",
-          "name_de": "WEB.DE Club",
-          "category_id": "email",
-          "icon_slug": "webdotde",
-          "brand_hex": null,
-          "domain": "web.de"
-        },
-        {
-          "service_id": "proton_mail_plus",
-          "name_de": "Proton Mail Plus",
-          "category_id": "email",
-          "icon_slug": "protonmail",
-          "brand_hex": null,
-          "domain": "proton.me"
-        }
+        { "service_id": "gmx_promail", "name_de": "GMX ProMail", "domain": "gmx.net", "icon_slug": "gmx", "brand_hex": null },
+        { "service_id": "web_de_club", "name_de": "WEB.DE Club", "domain": "web.de", "icon_slug": "webdotde", "brand_hex": null },
+        { "service_id": "proton_mail_plus", "name_de": "Proton Mail Plus", "domain": "proton.me", "icon_slug": "protonmail", "brand_hex": null }
       ]
     },
     "Sécurité & VPN": {
       "category_id": "security",
-      "label_fr": "Sécurité & VPN",
-      "label_de": "Sicherheit & VPN",
       "services": [
-        {
-          "service_id": "nordvpn",
-          "name_de": "NordVPN",
-          "category_id": "security",
-          "icon_slug": "nordvpn",
-          "brand_hex": null,
-          "domain": "nordvpn.com"
-        },
-        {
-          "service_id": "expressvpn",
-          "name_de": "ExpressVPN",
-          "category_id": "security",
-          "icon_slug": "expressvpn",
-          "brand_hex": null,
-          "domain": "expressvpn.com"
-        },
-        {
-          "service_id": "surfshark",
-          "name_de": "Surfshark",
-          "category_id": "security",
-          "icon_slug": "surfshark",
-          "brand_hex": null,
-          "domain": "surfshark.com"
-        },
-        {
-          "service_id": "1password",
-          "name_de": "1Password",
-          "category_id": "security",
-          "icon_slug": "1password",
-          "brand_hex": null,
-          "domain": "1password.com"
-        },
-        {
-          "service_id": "dashlane",
-          "name_de": "Dashlane",
-          "category_id": "security",
-          "icon_slug": "dashlane",
-          "brand_hex": null,
-          "domain": "dashlane.com"
-        },
-        {
-          "service_id": "bitwarden",
-          "name_de": "Bitwarden",
-          "category_id": "security",
-          "icon_slug": "bitwarden",
-          "brand_hex": null,
-          "domain": "bitwarden.com"
-        },
-        {
-          "service_id": "avast_premium",
-          "name_de": "Avast Premium",
-          "category_id": "security",
-          "icon_slug": "avast",
-          "brand_hex": null,
-          "domain": "avast.com"
-        },
-        {
-          "service_id": "bitdefender",
-          "name_de": "Bitdefender",
-          "category_id": "security",
-          "icon_slug": "bitdefender",
-          "brand_hex": null,
-          "domain": "bitdefender.com"
-        }
+        { "service_id": "nordvpn", "name_de": "NordVPN", "domain": "nordvpn.com", "icon_slug": "nordvpn", "brand_hex": null },
+        { "service_id": "expressvpn", "name_de": "ExpressVPN", "domain": "expressvpn.com", "icon_slug": "expressvpn", "brand_hex": null },
+        { "service_id": "surfshark", "name_de": "Surfshark", "domain": "surfshark.com", "icon_slug": "surfshark", "brand_hex": null },
+        { "service_id": "onepassword", "name_de": "1Password", "domain": "1password.com", "icon_slug": "1password", "brand_hex": null },
+        { "service_id": "dashlane", "name_de": "Dashlane", "domain": "dashlane.com", "icon_slug": "dashlane", "brand_hex": null },
+        { "service_id": "bitwarden", "name_de": "Bitwarden", "domain": "bitwarden.com", "icon_slug": "bitwarden", "brand_hex": null },
+        { "service_id": "avast_premium", "name_de": "Avast Premium", "domain": "avast.com", "icon_slug": "avast", "brand_hex": null },
+        { "service_id": "bitdefender", "name_de": "Bitdefender", "domain": "bitdefender.com", "icon_slug": "bitdefender", "brand_hex": null }
+      ]
+    },
+    "Fitness & Bien-être": {
+      "category_id": "fitness",
+      "services": [
+        { "service_id": "strava", "name_de": "Strava", "domain": "strava.com", "icon_slug": "strava", "brand_hex": null },
+        { "service_id": "freeletics", "name_de": "Freeletics", "domain": "freeletics.com", "icon_slug": "freeletics", "brand_hex": null },
+        { "service_id": "fitness_first", "name_de": "Fitness First", "domain": "fitnessfirst.de", "icon_slug": "fitnessfirst", "brand_hex": null },
+        { "service_id": "mcfit", "name_de": "McFIT", "domain": "mcfit.com", "icon_slug": "mcfit", "brand_hex": null },
+        { "service_id": "urban_sports_club", "name_de": "Urban Sports Club", "domain": "urbansportsclub.com", "icon_slug": "urbansportsclub", "brand_hex": null },
+        { "service_id": "gymondo", "name_de": "Gymondo", "domain": "gymondo.com", "icon_slug": "gymondo", "brand_hex": null },
+        { "service_id": "peloton", "name_de": "Peloton", "domain": "onepeloton.com", "icon_slug": "peloton", "brand_hex": null },
+        { "service_id": "headspace", "name_de": "Headspace", "domain": "headspace.com", "icon_slug": "headspace", "brand_hex": null },
+        { "service_id": "calm", "name_de": "Calm", "domain": "calm.com", "icon_slug": "calm", "brand_hex": null }
       ]
     },
     "Éducation": {
       "category_id": "education",
-      "label_fr": "Éducation",
-      "label_de": "Bildung",
       "services": [
-        {
-          "service_id": "babbel",
-          "name_de": "Babbel",
-          "category_id": "education",
-          "icon_slug": "babbel",
-          "brand_hex": null,
-          "domain": "babbel.com"
-        },
-        {
-          "service_id": "duolingo_super",
-          "name_de": "Duolingo Super",
-          "category_id": "education",
-          "icon_slug": "duolingo",
-          "brand_hex": null,
-          "domain": "duolingo.com"
-        },
-        {
-          "service_id": "udemy_personal_plan",
-          "name_de": "Udemy Personal Plan",
-          "category_id": "education",
-          "icon_slug": "udemy",
-          "brand_hex": null,
-          "domain": "udemy.com"
-        },
-        {
-          "service_id": "coursera_plus",
-          "name_de": "Coursera Plus",
-          "category_id": "education",
-          "icon_slug": "coursera",
-          "brand_hex": null,
-          "domain": "coursera.org"
-        },
-        {
-          "service_id": "masterclass",
-          "name_de": "MasterClass",
-          "category_id": "education",
-          "icon_slug": "masterclass",
-          "brand_hex": null,
-          "domain": "masterclass.com"
-        }
+        { "service_id": "babbel", "name_de": "Babbel", "domain": "babbel.com", "icon_slug": "babbel", "brand_hex": null },
+        { "service_id": "duolingo_super", "name_de": "Duolingo Super", "domain": "duolingo.com", "icon_slug": "duolingo", "brand_hex": null },
+        { "service_id": "udemy_personal_plan", "name_de": "Udemy Personal Plan", "domain": "udemy.com", "icon_slug": "udemy", "brand_hex": null },
+        { "service_id": "coursera_plus", "name_de": "Coursera Plus", "domain": "coursera.org", "icon_slug": "coursera", "brand_hex": null },
+        { "service_id": "masterclass", "name_de": "MasterClass", "domain": "masterclass.com", "icon_slug": "masterclass", "brand_hex": null }
       ]
     },
     "Food": {
       "category_id": "food",
-      "label_fr": "Food",
-      "label_de": "Essen",
       "services": [
-        {
-          "service_id": "hellofresh",
-          "name_de": "HelloFresh",
-          "category_id": "food",
-          "icon_slug": "hellofresh",
-          "brand_hex": null,
-          "domain": "hellofresh.de"
-        }
+        { "service_id": "hellofresh", "name_de": "HelloFresh", "domain": "hellofresh.de", "icon_slug": "hellofresh", "brand_hex": null }
       ]
     },
     "Télécom": {
       "category_id": "telecom",
-      "label_fr": "Télécom",
-      "label_de": "Telekommunikation",
       "services": [
-        {
-          "service_id": "telekom_mobilfunk",
-          "name_de": "Telekom Mobilfunk",
-          "category_id": "telecom",
-          "icon_slug": "telekom",
-          "brand_hex": null,
-          "domain": "telekom.de"
-        },
-        {
-          "service_id": "vodafone_mobilfunk",
-          "name_de": "Vodafone Mobilfunk",
-          "category_id": "telecom",
-          "icon_slug": "vodafone",
-          "brand_hex": null,
-          "domain": "vodafone.de"
-        },
-        {
-          "service_id": "o2_mobilfunk",
-          "name_de": "o2 Mobilfunk",
-          "category_id": "telecom",
-          "icon_slug": "o2",
-          "brand_hex": null,
-          "domain": "o2online.de"
-        },
-        {
-          "service_id": "1_und_1_mobilfunk",
-          "name_de": "1&1 Mobilfunk",
-          "category_id": "telecom",
-          "icon_slug": "1and1",
-          "brand_hex": null,
-          "domain": "1und1.de"
-        },
-        {
-          "service_id": "congstar",
-          "name_de": "Congstar",
-          "category_id": "telecom",
-          "icon_slug": "congstar",
-          "brand_hex": null,
-          "domain": "congstar.de"
-        },
-        {
-          "service_id": "aldi_talk",
-          "name_de": "ALDI TALK",
-          "category_id": "telecom",
-          "icon_slug": "aldi",
-          "brand_hex": null,
-          "domain": "alditalk.de"
-        },
-        {
-          "service_id": "lidl_connect",
-          "name_de": "Lidl Connect",
-          "category_id": "telecom",
-          "icon_slug": "lidl",
-          "brand_hex": null,
-          "domain": "lidl-connect.de"
-        },
-        {
-          "service_id": "freenet_mobilfunk",
-          "name_de": "freenet Mobilfunk",
-          "category_id": "telecom",
-          "icon_slug": "freenet",
-          "brand_hex": null,
-          "domain": "freenet.de"
-        }
+        { "service_id": "telekom_mobilfunk", "name_de": "Telekom Mobilfunk", "domain": "telekom.de", "icon_slug": "telekom", "brand_hex": null },
+        { "service_id": "vodafone_mobilfunk", "name_de": "Vodafone Mobilfunk", "domain": "vodafone.de", "icon_slug": "vodafone", "brand_hex": null },
+        { "service_id": "o2_mobilfunk", "name_de": "o2 Mobilfunk", "domain": "o2online.de", "icon_slug": "o2", "brand_hex": null },
+        { "service_id": "one_and_one_mobilfunk", "name_de": "1&1 Mobilfunk", "domain": "1und1.de", "icon_slug": "1and1", "brand_hex": null },
+        { "service_id": "congstar", "name_de": "Congstar", "domain": "congstar.de", "icon_slug": "congstar", "brand_hex": null },
+        { "service_id": "aldi_talk", "name_de": "ALDI TALK", "domain": "alditalk.de", "icon_slug": "aldi", "brand_hex": null },
+        { "service_id": "lidl_connect", "name_de": "Lidl Connect", "domain": "lidl-connect.de", "icon_slug": "lidl", "brand_hex": null },
+        { "service_id": "freenet_mobilfunk", "name_de": "freenet Mobilfunk", "domain": "freenet.de", "icon_slug": "freenet", "brand_hex": null }
       ]
     },
     "Presse": {
       "category_id": "news",
-      "label_fr": "Presse",
-      "label_de": "Nachrichten",
       "services": [
-        {
-          "service_id": "der_spiegel_plus",
-          "name_de": "DER SPIEGEL+",
-          "category_id": "news",
-          "icon_slug": "derspiegel",
-          "brand_hex": null,
-          "domain": "spiegel.de"
-        },
-        {
-          "service_id": "zeit_plus",
-          "name_de": "ZEIT+",
-          "category_id": "news",
-          "icon_slug": "zeit",
-          "brand_hex": null,
-          "domain": "zeit.de"
-        },
-        {
-          "service_id": "bildplus",
-          "name_de": "BILDplus",
-          "category_id": "news",
-          "icon_slug": "bild",
-          "brand_hex": null,
-          "domain": "bild.de"
-        },
-        {
-          "service_id": "faz_plus",
-          "name_de": "FAZ+",
-          "category_id": "news",
-          "icon_slug": "faz",
-          "brand_hex": null,
-          "domain": "faz.net"
-        },
-        {
-          "service_id": "sz_plus",
-          "name_de": "SZ Plus",
-          "category_id": "news",
-          "icon_slug": "sueddeutschezeitung",
-          "brand_hex": null,
-          "domain": "sueddeutsche.de"
-        },
-        {
-          "service_id": "handelsblatt_digital",
-          "name_de": "Handelsblatt Digital",
-          "category_id": "news",
-          "icon_slug": "handelsblatt",
-          "brand_hex": null,
-          "domain": "handelsblatt.com"
-        },
-        {
-          "service_id": "weltplus",
-          "name_de": "WELTplus",
-          "category_id": "news",
-          "icon_slug": "welt",
-          "brand_hex": null,
-          "domain": "welt.de"
-        },
-        {
-          "service_id": "taz_zahl_ich",
-          "name_de": "taz zahl ich",
-          "category_id": "news",
-          "icon_slug": "taz",
-          "brand_hex": null,
-          "domain": "taz.de"
-        },
-        {
-          "service_id": "focus_plus",
-          "name_de": "Focus Plus",
-          "category_id": "news",
-          "icon_slug": "focus",
-          "brand_hex": null,
-          "domain": "focus.de"
-        },
-        {
-          "service_id": "heise_plus",
-          "name_de": "heise+",
-          "category_id": "news",
-          "icon_slug": "heise",
-          "brand_hex": null,
-          "domain": "heise.de"
-        },
-        {
-          "service_id": "kicker_plus",
-          "name_de": "Kicker+",
-          "category_id": "news",
-          "icon_slug": "kicker",
-          "brand_hex": null,
-          "domain": "kicker.de"
-        },
-        {
-          "service_id": "manager_magazin_plus",
-          "name_de": "Manager Magazin+",
-          "category_id": "news",
-          "icon_slug": "managermagazin",
-          "brand_hex": null,
-          "domain": "manager-magazin.de"
-        }
+        { "service_id": "der_spiegel_plus", "name_de": "DER SPIEGEL+", "domain": "spiegel.de", "icon_slug": "derspiegel", "brand_hex": null },
+        { "service_id": "zeit_plus", "name_de": "ZEIT+", "domain": "zeit.de", "icon_slug": "zeit", "brand_hex": null },
+        { "service_id": "bildplus", "name_de": "BILDplus", "domain": "bild.de", "icon_slug": "bild", "brand_hex": null },
+        { "service_id": "faz_plus", "name_de": "FAZ+", "domain": "faz.net", "icon_slug": "faz", "brand_hex": null },
+        { "service_id": "sz_plus", "name_de": "SZ Plus", "domain": "sueddeutsche.de", "icon_slug": "sueddeutschezeitung", "brand_hex": null },
+        { "service_id": "handelsblatt_digital", "name_de": "Handelsblatt Digital", "domain": "handelsblatt.com", "icon_slug": "handelsblatt", "brand_hex": null },
+        { "service_id": "weltplus", "name_de": "WELTplus", "domain": "welt.de", "icon_slug": "welt", "brand_hex": null },
+        { "service_id": "taz_zahl_ich", "name_de": "taz zahl ich", "domain": "taz.de", "icon_slug": "taz", "brand_hex": null },
+        { "service_id": "focus_plus", "name_de": "Focus Plus", "domain": "focus.de", "icon_slug": "focus", "brand_hex": null },
+        { "service_id": "heise_plus", "name_de": "heise+", "domain": "heise.de", "icon_slug": "heise", "brand_hex": null },
+        { "service_id": "kicker_plus", "name_de": "Kicker+", "domain": "kicker.de", "icon_slug": "kicker", "brand_hex": null },
+        { "service_id": "manager_magazin_plus", "name_de": "Manager Magazin+", "domain": "manager-magazin.de", "icon_slug": "managermagazin", "brand_hex": null }
       ]
     },
     "Transport": {
       "category_id": "transport",
-      "label_fr": "Transport",
-      "label_de": "Verkehr",
       "services": [
-        {
-          "service_id": "deutschlandticket_db",
-          "name_de": "Deutschlandticket (DB)",
-          "category_id": "transport",
-          "icon_slug": "deutschebahn",
-          "brand_hex": null,
-          "domain": "bahn.de"
-        },
-        {
-          "service_id": "bahncard",
-          "name_de": "BahnCard",
-          "category_id": "transport",
-          "icon_slug": "deutschebahn",
-          "brand_hex": null,
-          "domain": "bahn.de"
-        },
-        {
-          "service_id": "bvg_abo",
-          "name_de": "BVG Abo",
-          "category_id": "transport",
-          "icon_slug": "bvg",
-          "brand_hex": null,
-          "domain": "bvg.de"
-        },
-        {
-          "service_id": "hvv_abo",
-          "name_de": "HVV Abo",
-          "category_id": "transport",
-          "icon_slug": "hvv",
-          "brand_hex": null,
-          "domain": "hvv.de"
-        },
-        {
-          "service_id": "mvv_abo",
-          "name_de": "MVV Abo",
-          "category_id": "transport",
-          "icon_slug": "mvv",
-          "brand_hex": null,
-          "domain": "mvv-muenchen.de"
-        },
-        {
-          "service_id": "adac_mitgliedschaft",
-          "name_de": "ADAC Mitgliedschaft",
-          "category_id": "transport",
-          "icon_slug": "adac",
-          "brand_hex": null,
-          "domain": "adac.de"
-        }
+        { "service_id": "deutschlandticket_db", "name_de": "Deutschlandticket (DB)", "domain": "bahn.de", "icon_slug": "deutschebahn", "brand_hex": null },
+        { "service_id": "bahncard", "name_de": "BahnCard", "domain": "bahn.de", "icon_slug": "deutschebahn", "brand_hex": null },
+        { "service_id": "bvg_abo", "name_de": "BVG Abo", "domain": "bvg.de", "icon_slug": "bvg", "brand_hex": null },
+        { "service_id": "hvv_abo", "name_de": "HVV Abo", "domain": "hvv.de", "icon_slug": "hvv", "brand_hex": null },
+        { "service_id": "mvv_abo", "name_de": "MVV Abo", "domain": "mvv-muenchen.de", "icon_slug": "mvv", "brand_hex": null },
+        { "service_id": "adac_mitgliedschaft", "name_de": "ADAC Mitgliedschaft", "domain": "adac.de", "icon_slug": "adac", "brand_hex": null }
       ]
     }
   }
