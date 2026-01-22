@@ -1,6 +1,7 @@
 [
   { "category_id": "streaming_video", "category_name": "Streaming (Video)", "category_color_hex": "#FF6825" },
   { "category_id": "streaming_music", "category_name": "Streaming (Musik)", "category_color_hex": "#E2725B" },
+  { "category_id": "music", "category_name": "Musik", "category_color_hex": "#1DB954" },
   { "category_id": "gaming", "category_name": "Gaming", "category_color_hex": "#6C5CE7" },
   { "category_id": "fitness", "category_name": "Fitness", "category_color_hex": "#00B894" },
   { "category_id": "cloud_storage", "category_name": "Cloud & Speicher", "category_color_hex": "#0984E3" },
@@ -11,17 +12,22 @@
   { "category_id": "hosting", "category_name": "Hosting", "category_color_hex": "#A29BFE" },
   { "category_id": "domains", "category_name": "Domains", "category_color_hex": "#E84393" },
   { "category_id": "vpn_security", "category_name": "VPN & Security", "category_color_hex": "#636E72" },
+  { "category_id": "security", "category_name": "Security", "category_color_hex": "#636E72" },
   { "category_id": "telecom", "category_name": "Mobilfunk & Internet", "category_color_hex": "#74B9FF" },
+  { "category_id": "email", "category_name": "E-Mail", "category_color_hex": "#1E88E5" },
   { "category_id": "banking", "category_name": "Banking", "category_color_hex": "#55EFC4" },
   { "category_id": "insurance", "category_name": "Versicherungen", "category_color_hex": "#FAB1A0" },
   { "category_id": "mobility", "category_name": "Mobilität", "category_color_hex": "#81ECEC" },
   { "category_id": "food_delivery", "category_name": "Lieferdienste", "category_color_hex": "#FF7675" },
+  { "category_id": "food", "category_name": "Food", "category_color_hex": "#91C83E" },
   { "category_id": "shopping", "category_name": "Shopping", "category_color_hex": "#FFEAA7" },
   { "category_id": "entertainment", "category_name": "Entertainment", "category_color_hex": "#B2BEC3" },
   { "category_id": "health", "category_name": "Gesundheit", "category_color_hex": "#00B894" },
   { "category_id": "finance_tools", "category_name": "Finanz-Tools", "category_color_hex": "#00CEC9" },
   { "category_id": "transport_tickets", "category_name": "Tickets & Transport", "category_color_hex": "#0984E3" },
+  { "category_id": "transport", "category_name": "Transport", "category_color_hex": "#0984E3" },
   { "category_id": "household", "category_name": "Haushalt", "category_color_hex": "#636E72" },
-  { "category_id": "other_misc", "category_name": "Sonstiges", "category_color_hex": "#B2BEC3" }
+  { "category_id": "other_misc", "category_name": "Sonstiges", "category_color_hex": "#B2BEC3" },
+  { "category_id": "reading_audio", "category_name": "Lesen & Audio", "category_color_hex": "#FF9900" }
 ]
 
